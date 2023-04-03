@@ -1,7 +1,25 @@
 body {
   text-align: center;
+  border: solid black;
+  border-radius: 60px;
+  width: 600px;
+  margin: 25px auto;
+  padding: 25px 150px 50px;
+  background-color: rgb(84, 173, 143);
 }
 
 .nav a {
   margin: 0px 25px;
+}
+
+html {
+  background: url("img/pandas-6954571__480.webp") center fixed;
+  background-size: auto;
+}
+img {
+  border-radius: 60px;
+}
+
+.quote {
+  font-family: fantasy;
 }
