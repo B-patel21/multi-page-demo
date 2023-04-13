@@ -3,6 +3,8 @@ document.getElementById("check-btn").addEventListener("click", btnClicked);
 
 function btnClicked() {
   // Inputs
+  let name = document.getElementById("name-in").value;
+  console.log(name);
   let answer1 = +document.getElementById("answer1-in").value.toLowerCase();
   console.log(answer1);
   let answer2 = document.getElementById("answer2-in").value.toLowerCase();
@@ -13,8 +15,14 @@ function btnClicked() {
   console.log(answer4);
 
   // Check Answer
+
+  if (name) {
+    document.getElementById("name-in").style.borderColor = "green ";
+  }
+
   if (answer1 === 12) {
     document.getElementById("answer1-in").style.borderColor = "green ";
+    document.getElementById("output-in").value = "correct";
   } else {
     document.getElementById("answer1-in").style.borderColor = "red ";
   }
