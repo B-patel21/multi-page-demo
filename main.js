@@ -77,3 +77,7 @@ function btnClicked() {
     document.getElementById("output");
   }
 }
+
+function markQuestion(qNum, correctAnswer) {
+  
+}
