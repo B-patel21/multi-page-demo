@@ -69,7 +69,7 @@ function btnClicked() {
 
   if (correct <= 2) {
     document.getElementById("output");
-  }
+  } 
   if (correct > 2 && correct < 3) {
     document.getElementById("output");
   }
@@ -78,6 +78,12 @@ function btnClicked() {
   }
 }
 
-function markQuestion(qNum, correctAnswer) {
-  
-}
+// function markQuestion(qNum, correctAnswer) {
+//   let userElement = document.getElementById("answer" + ${qNum}).value; 
+//   let feedbackEl = document.getElementById()
+//   let marks = 0
+//   if (userElement === correctAnswer){
+//     return marks = 1
+//     document.getElementById()
+//   }
+// }
