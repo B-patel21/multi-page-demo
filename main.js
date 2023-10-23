@@ -16,53 +16,11 @@ function btnClicked() {
   let correct = 0;
   // Check Answer
 
-  if (name) {
-    document.getElementById("name-in").style.borderColor = "green ";
-  }
-
-  if (answer1 === "12") {
-    correct++;
-    document.getElementById("answer1-in").style.borderColor = "green ";
-    document.getElementById("q1-response").innerHTML = "Correct. Nice Job!";
-  } else {
-    document.getElementById("answer1-in").style.borderColor = "red ";
-    document.getElementById(
-      "q1-response"
-    ).innerHTML = `Incorrect. Correct answer is 12`;
-  }
-
-  if (answer2 === "bamboo") {
-    correct++;
-    document.getElementById("answer2-in").style.borderColor = "green ";
-    document.getElementById("q2-response").innerHTML = "Correct. Nice Job!";
-  } else {
-    document.getElementById("answer2-in").style.borderColor = "red ";
-    document.getElementById(
-      "q2-response"
-    ).innerHTML = `Incorrect. Correct answer is bamboo`;
-  }
-
-  if (answer3 === "pink") {
-    correct++;
-    document.getElementById("answer3-in").style.borderColor = "green ";
-    document.getElementById("q3-response").innerHTML = "Correct. Nice Job!";
-  } else {
-    document.getElementById("answer3-in").style.borderColor = "red ";
-    document.getElementById(
-      "q3-response"
-    ).innerHTML = `Incorrect. Correct answer is pink`;
-  }
-
-  if (answer4 === "south-west china") {
-    correct++;
-    document.getElementById("answer4-in").style.borderColor = "green ";
-    document.getElementById("q4-response").innerHTML = "Correct. Nice Job!";
-  } else {
-    document.getElementById("answer4-in").style.borderColor = "red ";
-    document.getElementById(
-      "q4-response"
-    ).innerHTML = `Incorrect. Correct answer is south-west China`;
-  }
+  let score = 0;
+  score += markQuestion(answer1, "12");
+  score += markQuestion(answer2, "bamboo");
+  score += markQuestion(answer3, "pink");
+  score += markQuestion(answer4, "south-west china");
 
   document.getElementById("out-score").innerHTML = correct;
   document.getElementById("percent-score").innerHTML = (correct / 4) * 100;
@@ -78,6 +36,7 @@ function btnClicked() {
   }
 }
 
+<<<<<<< HEAD
 // function markQuestion(qNum, correctAnswer) {
 //   let userElement = document.getElementById("answer" + ${qNum}).value; 
 //   let feedbackEl = document.getElementById()
@@ -87,3 +46,21 @@ function btnClicked() {
 //     document.getElementById()
 //   }
 // }
+=======
+function markQuestion(qNum, correctAnswer) {
+  let userAnswer = document.getElementById("answer" + ${qNum}).value.toLowerCase; 
+  let feedbackEl = document.getElementById("feedback").value;
+  let mark = 0;
+
+  if (userAnswer === correctAnswer) {
+    feedbackEl.innerHTML = "Correct!";
+    feedbackEl.style.color = "green";
+    mark = 1;
+  } else {
+    feedbackEl.innerHTML = "Incorrect. Correct answer is " + correctAnswer;
+    feedbackEl.style.color = "red";
+  }
+
+  return mark;
+}
+>>>>>>> 89f69ef2fddb73279e704f7a300752531aefb9af
